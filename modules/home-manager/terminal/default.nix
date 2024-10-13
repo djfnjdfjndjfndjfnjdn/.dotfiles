@@ -12,6 +12,8 @@
         font-bold-italic = "SauceCodePro Nerd Font:size=10.8:style=Bold Italic";
         line-height = "19";
         underline-offset = "19";
+
+        pad = "6x0";
       };
       cursor = {
         color = "2e3440 d8dee9";
