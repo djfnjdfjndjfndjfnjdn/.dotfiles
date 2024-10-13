@@ -5,6 +5,10 @@
   # Inputs
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -14,6 +18,7 @@
   # Outputs
   outputs = {
     self,
+    nixvim,
     nixpkgs,
     home-manager,
     ...
@@ -37,6 +42,7 @@
       # Modules
       modules = [
         ./nixos/configuration.nix
+        nixvim.nixosModules.nixvim
         home-manager.nixosModules.home-manager
         {
           home-manager = {

@@ -1,7 +1,14 @@
-{user, ...}: {
+{
+  user,
+  inputs,
+  ...
+}: {
   imports = [
     # Include my own set of Home Manager modules
     ../modules/home-manager
+
+    # NixVim
+    inputs.nixvim.homeManagerModules.nixvim
   ];
 
   # Home Manager needs a bit of information about you and the

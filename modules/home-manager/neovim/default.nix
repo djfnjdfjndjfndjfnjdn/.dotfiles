@@ -1,6 +1,6 @@
 {
-  # Configure Neovim
-  programs.neovim = {
+  # Configure NixVim (Neovim)
+  programs.nixvim = {
     enable = true;
   };
 }
